@@ -25,20 +25,26 @@ function SearchPage({ favourites, addToFavourites }) {
     <PropertyCard key={property.id} property={property} addToFavourites={addToFavourites} />
 
     return (
-      <div>
-        <h2>Property Search</h2>
+      <div className="search-layout">
+        <div>
         
-        <SearchForm criteria={criteria} setCriteria={setCriteria} />
+            <SearchForm criteria={criteria} setCriteria={setCriteria} />
 
-        <h3>Results: {filteredProperties.length}</h3>
-
-        <div className="results-grid">
-            {filteredProperties.map((property) => (
-                <PropertyCard key={property.id} property={property} />
-            ))}
+            <div className="results-grid">
+                {filteredProperties.map((property) => (
+                    <PropertyCard key={property.id} property={property} addToFavourites={addToFavourites} />
+                ))}
+            </div>
         </div>
 
+        <Favourites
+            favourites={favourites}
+            removeFromFavourites={removeFromFavourites}
+            clearFavourites={clearFavourites}
+        />
+
       </div>
+
     );
   }
   
