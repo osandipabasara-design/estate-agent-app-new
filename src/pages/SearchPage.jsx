@@ -8,7 +8,7 @@ import "./SearchPage.css";
 import Favourites from "../components/Favourites";
 
 
-function SearchPage({ favourites, addToFavourites }) {
+function SearchPage({ favourites, addToFavourites, removeFromFavourites, clearFavourites}) {
 
     const [criteria, setCriteria] = useState(
         {
@@ -26,10 +26,8 @@ function SearchPage({ favourites, addToFavourites }) {
 
     return (
       <div className="search-layout">
-        <div>
-        
+        <div className="main-content">
             <SearchForm criteria={criteria} setCriteria={setCriteria} />
-
             <div className="results-grid">
                 {filteredProperties.map((property) => (
                     <PropertyCard key={property.id} property={property} addToFavourites={addToFavourites} />

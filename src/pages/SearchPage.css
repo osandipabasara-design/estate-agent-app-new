@@ -2,11 +2,30 @@
     max-width: 1200px;
     margin: auto;
     padding: 20px;
-  }
+}
   
-  .results-grid {
+.results-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
     gap: 20px;
-  }
+}
+
+.search-layout {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 20px;
+}
+  
+.favourites {
+    background: #fafafa;
+    padding: 15px;
+    border-radius: 8px;
+}
+  
+.favourite-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+  
   

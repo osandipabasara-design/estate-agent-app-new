@@ -9,13 +9,13 @@ function App() {
   const [favourites, setFavourites] = useState([]);
 
   const addToFavourites = (property) => {
-    if (!favourites.find((p) => p.id === property.id)) {
+    if (!favourites.some((p) => p.id === property.id)) {
       setFavourites([...favourites, property]);
     }
   };
 
   const removeFromFavourites = (id) => {
-    setFavourites(favourites.filter((p) => p.id !==id));
+    setFavourites(favourites.filter((p) => p.id !== id));
   };
 
   const clearFavourites = () => {
@@ -25,7 +25,7 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<SearchPage favourites={favourites} addToFavourites={addToFavourites} />} />
+        <Route path="/" element={<SearchPage favourites={favourites} addToFavourites={addToFavourites} removeFromFavourites={removeFromFavourites} clearFavourites={clearFavourites} /> } />
         <Route path="/property/:id" elemet={<PropertyPage favourites={favourites} addToFavourites={addToFavourites} />} />
       </Routes>
     </BrowserRouter>
