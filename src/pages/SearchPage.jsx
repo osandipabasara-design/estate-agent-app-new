@@ -5,8 +5,10 @@ import SearchForm from "../components/SearchForm";
 import filterProperties from "../utils/filterProperties";
 import PropertyCard from "../components/PropertyCard";
 import "./SearchPage.css";
+import Favourites from "../components/Favourites";
 
-function SearchPage() {
+
+function SearchPage({ favourites, addToFavourites }) {
 
     const [criteria, setCriteria] = useState(
         {
@@ -19,6 +21,8 @@ function SearchPage() {
     );
 
     const filteredProperties = filterProperties(properties, criteria);
+
+    <PropertyCard key={property.id} property={property} addToFavourites={addToFavourites} />
 
     return (
       <div>

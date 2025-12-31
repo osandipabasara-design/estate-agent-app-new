@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom";
 import "./PropertyCard.css";
 
-function PropertyCard({ property }) {
+function PropertyCard({ property, addToFavourites }) {
   return (
-    <div className="property-card">
+    <div className="property-card" draggable onDragStart={(e) => e.dataTransfer.setData("property", JSON.stringify(property))}>
       <img
         src={property.images[0]}
         alt={property.shortDescription}
@@ -16,6 +16,10 @@ function PropertyCard({ property }) {
           {property.type} • {property.bedrooms} bedrooms
         </p>
         <p>{property.shortDescription}</p>
+
+        <button onClick={() => addToFavourites(property)}>
+            Add to Favourites
+        </button>
 
         <Link to={`/property/${property.id}`} className="details-link">
           View Details
