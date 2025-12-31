@@ -1,6 +1,5 @@
-import { Link } from "react-router-dom";
-import properties from "../data/properties.json";
-import { useState } from "react";
+import data from "../data/properties.json"; 
+import { useState } from "react"; 
 import SearchForm from "../components/SearchForm";
 import filterProperties from "../utils/filterProperties";
 import PropertyCard from "../components/PropertyCard";
@@ -20,9 +19,8 @@ function SearchPage({ favourites, addToFavourites, removeFromFavourites, clearFa
         }
     );
 
-    const filteredProperties = filterProperties(properties, criteria);
-
-    <PropertyCard key={properties.id} property={properties} addToFavourites={addToFavourites} />
+    const filteredProperties = filterProperties(data.properties, criteria);
+ 
 
     return (
       <div className="search-layout">

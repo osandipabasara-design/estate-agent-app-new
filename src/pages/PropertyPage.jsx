@@ -1,11 +1,11 @@
 import Gallery from "../components/Gallery";
 import { useParams } from "react-router-dom";
-import properties from "../data/properties.json";
+import data from "../data/properties.json";
 import PropertyTabs from "../components/PropertyTabs";
 
 function PropertyPage() {
     const { id } = useParams();
-    const property = properties.find((p) => p.id === id);
+    const property = data.properties.find((p) => p.id === id);
 
     if (!property) {
         return <p>Property not found</p>

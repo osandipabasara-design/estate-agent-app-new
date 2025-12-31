@@ -26,7 +26,7 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<SearchPage favourites={favourites} addToFavourites={addToFavourites} removeFromFavourites={removeFromFavourites} clearFavourites={clearFavourites} /> } />
-        <Route path="/property/:id" elemet={<PropertyPage favourites={favourites} addToFavourites={addToFavourites} />} />
+        <Route path="/property/:id" element={<PropertyPage favourites={favourites} addToFavourites={addToFavourites} />} />
       </Routes>
     </BrowserRouter>
   );
