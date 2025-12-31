@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import properties from "../data/properties.json";
+import data from "../data/properties.json";
 import { useState } from "react";
 import SearchForm from "../components/SearchForm";
 
