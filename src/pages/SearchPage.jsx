@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import properties from "../data/properties.json";
 import { useState } from "react";
 import SearchForm from "../components/SearchForm";
+import filterProperties from "../utils/filterProperties";
 
 function SearchPage() {
 
@@ -13,15 +14,24 @@ function SearchPage() {
         postcode:""
     });
 
+    const filterProperties = filterProperties(properties, criteria);
+
     return (
       <div>
         <h2>Property Search</h2>
         
         <SearchForm criteria={criteria} setCriteria={setCriteria} />
 
-        <p>Properties loaded: {properties.length}</p>
-        <pre>{JSON.stringify(criteria, null, 2)}</pre>
-        
+        <h3>Results: {filterProperties.length}</h3>
+
+        <ul>
+            {filterProperties.map((property) => (
+                <li key={property.id}>
+                    {property.type} - £{property.price} - {property.bedrooms} beds
+                </li>
+            ))}
+        </ul>
+
       </div>
     );
   }
