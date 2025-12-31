@@ -1,8 +1,26 @@
+import Gallery from "../components/Gallery";
+import { useParams } from "react-router-dom";
+import properties from "../data/properties.json";
+import PropertyTabs from "../components/PropertyTabs";
+
 function PropertyPage() {
+    const { id } = useParams();
+    const property = properties.find((p) => p.id === id);
+
+    if (!property) {
+        return <p>Property not found</p>
+    }
+
     return (
-      <div>
+      <div style={{maxWidth: "1200px", margin: "auto", padding: "20px" }}>
         <h2>Property Details</h2>
-        <p>Property information will go here</p>
+
+        <p>
+        {property.type} • {property.bedrooms} bedrooms • {property.location}
+        </p>
+
+        <Gallery images={property.images} />
+        <PropertyTabs property={property} />
       </div>
     );
   }

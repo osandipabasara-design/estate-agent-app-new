@@ -3,18 +3,22 @@ import properties from "../data/properties.json";
 import { useState } from "react";
 import SearchForm from "../components/SearchForm";
 import filterProperties from "../utils/filterProperties";
+import PropertyCard from "../components/PropertyCard";
+import "./SearchPage.css";
 
 function SearchPage() {
 
-    const [criteria, setCriteria] = useState({
-        type:"",
-        price: [0, 1000000],
-        bedrooms: [0, 6],
-        date: null,
-        postcode:""
-    });
+    const [criteria, setCriteria] = useState(
+        {
+            type:"",
+            price: [0, 1000000],
+            bedrooms: [0, 6],
+            date: null,
+            postcode:""
+        }
+    );
 
-    const filterProperties = filterProperties(properties, criteria);
+    const filteredProperties = filterProperties(properties, criteria);
 
     return (
       <div>
@@ -22,15 +26,13 @@ function SearchPage() {
         
         <SearchForm criteria={criteria} setCriteria={setCriteria} />
 
-        <h3>Results: {filterProperties.length}</h3>
+        <h3>Results: {filteredProperties.length}</h3>
 
-        <ul>
-            {filterProperties.map((property) => (
-                <li key={property.id}>
-                    {property.type} - £{property.price} - {property.bedrooms} beds
-                </li>
+        <div className="results-grid">
+            {filteredProperties.map((property) => (
+                <PropertyCard key={property.id} property={property} />
             ))}
-        </ul>
+        </div>
 
       </div>
     );
