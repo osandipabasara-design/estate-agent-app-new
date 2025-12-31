@@ -22,7 +22,7 @@ function SearchPage({ favourites, addToFavourites, removeFromFavourites, clearFa
 
     const filteredProperties = filterProperties(properties, criteria);
 
-    <PropertyCard key={property.id} property={property} addToFavourites={addToFavourites} />
+    <PropertyCard key={properties.id} property={properties} addToFavourites={addToFavourites} />
 
     return (
       <div className="search-layout">
