@@ -1,8 +1,9 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
 import { useState } from "react";
 import SearchPage from "./pages/SearchPage";
 import PropertyPage from "./pages/PropertyPage";
 import './App.css';
+import Footer from "./components/Footer";
 
 function App() {
 
@@ -23,13 +24,17 @@ function App() {
   };
 
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Routes>
         <Route path="/" element={<SearchPage favourites={favourites} addToFavourites={addToFavourites} removeFromFavourites={removeFromFavourites} clearFavourites={clearFavourites} /> } />
         <Route path="/property/:id" element={<PropertyPage favourites={favourites} addToFavourites={addToFavourites} />} />
       </Routes>
-    </BrowserRouter>
+      
+      <Footer/>
+    </HashRouter>
   );
+
+  
 }
 
 export default App;
