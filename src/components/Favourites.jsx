@@ -1,3 +1,5 @@
+import "./Favourites.css";
+
 function Favourites({ favourites, removeFromFavourites, clearFavourites }) {
     return (
       <div 

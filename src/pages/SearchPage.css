@@ -1,5 +1,5 @@
 .search-page {
-    max-width: 1200px;
+    max-width: 1300px;
     margin: auto;
     padding: 20px;
 }
@@ -13,7 +13,7 @@
 .search-layout {
     display: grid;
     grid-template-columns: 3fr 1fr;
-    gap: 20px;
+    gap: 25px;
 }
   
 .favourites {

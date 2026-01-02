@@ -1,6 +1,7 @@
 import { TextField, MenuItem, Button, Slider } from "@mui/material";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
+import "./SearchForm.css";
 
 function SearchForm({ criteria, setCriteria }) {
 
@@ -12,7 +13,7 @@ function SearchForm({ criteria, setCriteria }) {
   };
 
   return (
-    <div style={{ marginBottom: "20px" }}>
+    <div  classname="search-form" style={{ marginBottom: "20px" }}>
       <h3>Search Properties</h3>
 
       {/* Property Type */}
@@ -30,23 +31,22 @@ function SearchForm({ criteria, setCriteria }) {
       </TextField>
 
       {/* Price Range */}
-      <label>Price Range (£)</label>
-      <Slider
+      <label>Price Range (£)</label> 
+      <TextField
+        label="Enter price range"
         value={criteria.price}
-        onChange={(e, value) => handleChange("price", value)}
-        valueLabelDisplay="auto"
-        min={0}
-        max={1000000}
+        onChange={(e) => handleChange("price", e.target.value)}
+        fullWidth
+        margin="normal"
       />
 
       {/* Bedrooms */}
       <label>Bedrooms</label>
-      <Slider
+      <TextField
         value={criteria.bedrooms}
-        onChange={(e, value) => handleChange("bedrooms", value)}
-        valueLabelDisplay="auto"
-        min={0}
-        max={6}
+        onChange={(e) => handleChange("bedrooms", e.target.value)}
+        fullWidth
+        margin="normal"
       />
 
       {/* Date Added */}

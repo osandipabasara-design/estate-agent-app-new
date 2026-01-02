@@ -1,24 +1,45 @@
 .property-card {
+    background: var(--card-bg);
+    box-shadow: var(--shadow);
     display: flex;
-    background: #ffffff;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden; 
+    transition: transform 0.2s ease;
+    margin: 20px;
+}
+
+.property-card:hover {
+    transform: translateY(-4px);
 }
   
 .property-image {
-    width: 220px;
-    height: 160px;
+    width: 240px;
+    height: 180px;
     object-fit: cover;
 }
   
 .property-info {
-    padding: 15px;
+    padding: 16px;
     flex: 1;
 }
   
 .property-info h3 {
-    margin: 0 0 5px;
+    margin: 0;
+    color: var(--primary);
+}
+
+.property-info p{
+    margin: 6px 0;
+    color: var(--text-light);
+}
+
+.property-info button{
+    margin: 10px;
+    background: var(--primary);
+    color: white;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 4px;
+    cursor: pointer;
 }
   
 .details-link {
