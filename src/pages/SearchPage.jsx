@@ -12,8 +12,8 @@ function SearchPage({ favourites, addToFavourites, removeFromFavourites, clearFa
     const [criteria, setCriteria] = useState(
         {
             type:"",
-            price: [0, 1000000],
-            bedrooms: [0, 6],
+            price: "",
+            bedrooms: "",
             date: null,
             postcode:""
         }

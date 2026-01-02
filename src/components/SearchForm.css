@@ -3,7 +3,7 @@
     padding: 20px;
     border-radius: var(--border-radius);
     box-shadow: var(--shadow);
-    margin-bottom: 20px;
+    margin: 20px;
   }
   
   .search-form h3 {
