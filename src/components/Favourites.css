@@ -1,6 +1,7 @@
 .favourites {
     background: var(--card-bg);
-    padding: 16px; 
+    padding: 16px;
+    border-radius: var(--border-radius);
     box-shadow: var(--shadow);
   }
   
