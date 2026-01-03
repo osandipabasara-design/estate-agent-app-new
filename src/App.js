@@ -1,9 +1,12 @@
 import { HashRouter, Routes, Route } from "react-router-dom";
 import { useState } from "react";
+import Home from "./pages/Home";
 import SearchPage from "./pages/SearchPage";
 import PropertyPage from "./pages/PropertyPage";
-import './App.css';
-import Footer from "./components/Footer";
+import FavouritesPage from "./pages/FavouritesPage";
+import Contact from "./pages/Contact";
+import Footer from "./components/Footer"; 
+import './App.css'; 
 
 function App() {
 
@@ -26,10 +29,12 @@ function App() {
   return (
     <HashRouter>
       <Routes>
-        <Route path="/" element={<SearchPage favourites={favourites} addToFavourites={addToFavourites} removeFromFavourites={removeFromFavourites} clearFavourites={clearFavourites} /> } />
+        <Route path="/search" element={<SearchPage favourites={favourites} addToFavourites={addToFavourites} removeFromFavourites={removeFromFavourites} clearFavourites={clearFavourites} /> } />
         <Route path="/property/:id" element={<PropertyPage favourites={favourites} addToFavourites={addToFavourites} />} />
+        <Route path="/favourites" element={<FavouritesPage />} />
+        <Route path="/contact" element={<Contact />} />
       </Routes>
-      
+
       <Footer/>
     </HashRouter>
   );
