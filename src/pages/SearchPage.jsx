@@ -32,13 +32,7 @@ function SearchPage({ favourites, addToFavourites, removeFromFavourites, clearFa
                 ))}
             </div>
         </div>
-
-        <Favourites
-            favourites={favourites}
-            removeFromFavourites={removeFromFavourites}
-            clearFavourites={clearFavourites}
-        />
-
+ 
       </div>
 
     );

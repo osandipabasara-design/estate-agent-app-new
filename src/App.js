@@ -31,12 +31,12 @@ function App() {
     <HashRouter>
       <>
         <Navbar />
-        
+
         <Routes>
           <Route path="/" element={<Home />}/>
           <Route path="/search" element={<SearchPage favourites={favourites} addToFavourites={addToFavourites} removeFromFavourites={removeFromFavourites} clearFavourites={clearFavourites} /> } />
           <Route path="/property/:id" element={<PropertyPage favourites={favourites} addToFavourites={addToFavourites} />} />
-          <Route path="/favourites" element={<FavouritesPage />} />
+          <Route path="/favourites" element={<FavouritesPage favourites={favourites} addToFavourites={addToFavourites} removeFromFavourites={removeFromFavourites} clearFavourites={clearFavourites}/>} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
       </>
