@@ -1,16 +1,27 @@
 .navbar {
-    background: #0a1a2f;
+    position: fixed;
+    top: 0;
+    left: 0;
+    justify-content: center;
+    background: #0e0e48;
     padding: 15px;
     display: flex;
-    gap: 20px;
+    gap: 40px;
+    width: 100%;
+    margin-right: 100px;
+
 }
   
 .navbar a {
-    color: white;
+    color: rgb(255, 255, 255);
     text-decoration: none;
+    padding: 5px 10px;
 }
   
 .navbar a:hover {
-    text-decoration: underline;
+    text-decoration: none;
+    background-color: rgba(255, 255, 255, 0.436);
+    border-radius: 35px;
+    width: 60px;
 }
   
