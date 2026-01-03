@@ -1,6 +1,7 @@
 import "./Favourites.css";
 
-function Favourites({ favourites, removeFromFavourites, clearFavourites }) {
+function Favourites({ favourites = [], removeFromFavourites = () => {}, clearFavourites =() => {} }) 
+{
     return (
       <div 
         className="favourites"

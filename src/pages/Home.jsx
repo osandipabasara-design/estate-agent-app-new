@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const Home = () => {
     return (
         <div className="page">
@@ -5,6 +7,8 @@ const Home = () => {
             <p>
                 Browser properties , Search by criteria, and save your Favourites
             </p>
+
+            <Link to="/search">Go to Search</Link>
         </div>
     );
 };
