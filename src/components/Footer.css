@@ -1,7 +1,9 @@
 footer {
-    background-color: #0a1a2f;
+    background: linear-gradient(to right, #0a1a2f,#28476f);
     padding: 40px 0;
     margin-top: 50px;
+
+    
 }
   
 .footer-info {
@@ -47,6 +49,24 @@ hr {
     color: rgb(197, 197, 197);
     font-size: 14px;
 }
+
+.social-links {
+    display: flex;
+    gap: 15px;
+}
+  
+.social-links a {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: white;
+    text-decoration: none;
+}
+  
+.social-links a:hover {
+    color: rgb(255, 161, 246);
+}
+  
 
 @media (max-width: 768px) {
     .top-info {

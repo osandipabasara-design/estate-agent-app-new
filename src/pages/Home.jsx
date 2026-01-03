@@ -1,15 +1,14 @@
-import { Link } from "react-router-dom";
-import "./Home.css";
+import "./Home.css"; 
 
 const Home = () => {
     return (
         <div className="page">
-            <h1>Welcome Estate Agent App</h1>
-            <p>
-                Browser properties , Search by criteria, and save your Favourites
-            </p>
+            <h1>Find Your Home🏡</h1>
 
-            <Link to="/search">Go to Search</Link>
+            <p>
+                "Designed to search, explore and manage property listing efficiently. A beeter place for a better future."
+            </p>
+ 
         </div>
     );
 };

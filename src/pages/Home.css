@@ -1,4 +1,16 @@
-.page{
-    padding: 30px;
+.page{ 
+    padding: 90px;
+
     
+}
+
+.page h1{
+    display: flex;
+    justify-content: center;
+}
+.page p {
+    font-weight: bold;
+    font-size: 15px;
+    display: flex;
+    justify-content: center; 
 }
