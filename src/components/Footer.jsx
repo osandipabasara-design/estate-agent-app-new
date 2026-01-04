@@ -41,11 +41,11 @@ const Footer = () => {
         <hr />
 
         <p className="footer-copy">
-          © 2025 Sri Lanka Mega Projects Blog | Building the Future
+          © 2026 EstateAgent | Find Your Perfect Property
         </p>
 
         <p className="footer-tagline">
-          Showcasing Sri Lanka's architectural marvels and urban development
+          Showcasing finest homes, properties, and real estate oppotunities
         </p>
       </div>
     </footer>
