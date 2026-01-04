@@ -21,7 +21,7 @@ function Favourites({ favourites = [], removeFromFavourites = () => {}, clearFav
   
         {favourites.map((property) => (
           <div key={property.id} className="favourite-item">
-            <p>{property.type}</p>
+            <p>{property.shortDescription}</p>
             <button onClick={() => removeFromFavourites(property.id)}>
               Remove
             </button>
