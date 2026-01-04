@@ -14,10 +14,10 @@ const Contact = () => {
             <div className="contact-form">
                 <form>
                     <label for="name">Name : </label>
-                    <input type="text" value="name" placeholder="Enter Your Name" />
+                    <input type="text" placeholder="Enter Your Name" />
 
                     <label for="email">Email : </label>
-                    <input type="text" value="email" placeholder="example@email.com" />
+                    <input type="text"  placeholder="example@email.com" />
 
                     <label for="message">Message : </label>
                     <textarea placeholder="type your message here"></textarea>
