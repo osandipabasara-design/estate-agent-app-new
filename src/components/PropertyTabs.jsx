@@ -21,7 +21,7 @@ function PropertyTabs({ property }) {
       {value === 1 && (
         <Box sx={{ padding: 2 }}>
           <img
-            src={property.floorPlan}
+            src={`${process.env.PUBLIC_URL}${property.floorPlan}`}
             alt="Floor Plan"
             style={{ width: "100%" }}
           />
