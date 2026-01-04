@@ -5,7 +5,7 @@ function PropertyCard({ property, addToFavourites }) {
   return (
     <div className="property-card" draggable onDragStart={(e) => e.dataTransfer.setData("property", JSON.stringify(property))}>
       <img
-        src={property.images[0]}
+        src={property.images[1]}
         alt={property.shortDescription}
         className="property-image"
       />
