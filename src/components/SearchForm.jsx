@@ -28,6 +28,8 @@ function SearchForm({ criteria, setCriteria }) {
         <MenuItem value="">Any</MenuItem>
         <MenuItem value="House">House</MenuItem>
         <MenuItem value="Flat">Flat</MenuItem>
+        <MenuItem value="Bungalow">Bungalow</MenuItem>
+        <MenuItem value="Apartment">Apartment</MenuItem>
       </TextField>
 
       {/* Price Range */}
