@@ -26,15 +26,16 @@ const Contact = () => {
 
                 </form>
             </div>
-        </div>
+        
 
-        {/*Contact Info */}
-        <div className="contact-info">
-            <h2>Contact Information</h2>
+            {/*Contact Info */}
+            <div className="contact-info">
+                <h2>Contact Information</h2>
 
-            <p><strong>Email : </strong>w2153603@westminster.ac.uk</p>
-            <p><strong>Phone : </strong>+44 20 7946 0958</p>
-            <p><strong>Address : </strong>45 King William Street, Lond, EC4R 9AN, UK</p>
+                <p><strong>Email : </strong>w2153603@westminster.ac.uk</p>
+                <p><strong>Phone : </strong>+44 20 7946 0958</p>
+                <p><strong>Address : </strong>45 King William Street, Lond, EC4R 9AN, UK</p>
+            </div>
         </div>
 
 
