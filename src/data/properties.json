@@ -22,7 +22,7 @@
         },
         {
             "id":"prop2",
-            "type":"flat",
+            "type":"Flat",
             "bedrooms":2,
             "price":399995,
             "postcode": "NW2",
@@ -42,7 +42,7 @@
         },
         {
             "id":"prop3",
-            "type":"flat",
+            "type":"Flat",
             "bedrooms":2,
             "price":399995,
             "postcode": "NW3",
@@ -62,7 +62,7 @@
         },
         {
             "id":"prop4",
-            "type":"apartment",
+            "type":"Apartment",
             "bedrooms":2,
             "price":520000,
             "postcode": "NW4",
@@ -82,7 +82,7 @@
         },
         {
             "id":"prop5",
-            "type":"bungalow",
+            "type":"Bungalow",
             "bedrooms":3,
             "price":610000,
             "postcode": "NW5",
@@ -102,7 +102,7 @@
         },
         {
             "id":"prop6",
-            "type":"flat",
+            "type":"Flat",
             "bedrooms":1,
             "price":345000,
             "postcode": "NW6",
@@ -122,7 +122,7 @@
         },
         {
             "id":"prop7",
-            "type":"house",
+            "type":"House",
             "bedrooms":3,
             "price":890000,
             "postcode": "NW7",
