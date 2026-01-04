@@ -6,13 +6,13 @@ function Gallery({ images }) {
 
   return (
     <div className="gallery">
-      <img src={mainImage} alt="Property" className="main-image" />
+      <img src={`${process.env.PUBLIC_URL}${mainImage}`} alt="Property" className="main-image" />
 
       <div className="thumbnails">
         {images.map((img, index) => (
           <img
             key={index}
-            src={img}
+            src={`${process.env.PUBLIC_URL}${img}`}
             alt="Thumbnail"
             className={`thumbnail ${img === mainImage ? "active" : ""}`}
             onClick={() => setMainImage(img)}
