@@ -33,7 +33,7 @@ function SearchForm({ criteria, setCriteria }) {
       </TextField>
 
       {/* Price Range */}
-      <label>Price Range (£)</label> 
+      <label>Price (£)</label> 
       <TextField
         label="Enter price range"
         value={criteria.price}
